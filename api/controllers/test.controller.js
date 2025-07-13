@@ -15,7 +15,8 @@ export const shouldBeAdmin = async (req, res) => {
     if (!payload.isAdmin) {
       return res.status(403).json({ message: "Not authorized!" });
     }
+    
+  res.status(200).json({ message: "You are Authenticated" });
   });
 
-  res.status(200).json({ message: "You are Authenticated" });
 };
