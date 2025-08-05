@@ -88,14 +88,27 @@ export const addPost = async (req, res) => {
   }
 };
 
+import { prisma } from '../utils/prisma.js';
+
 export const updatePost = async (req, res) => {
+  const postId = req.params.id;
+  const updateData = req.body;
+
   try {
-    res.status(200).json();
+    const updatedPost = await prisma.post.update({
+      where: {
+        id: postId,
+      },
+      data: updateData,
+    });
+
+    res.status(200).json(updatedPost);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Failed to update posts" });
+    res.status(500).json({ message: "Failed to update post" });
   }
 };
+
 
 export const deletePost = async (req, res) => {
   const id = req.params.id;
