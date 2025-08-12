@@ -6,11 +6,11 @@ import { AuthContextProvider } from "./context/AuthContext.jsx";
 import { SocketContextProvider } from "./context/SocketContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React>
+  <>
     <AuthContextProvider>
       <SocketContextProvider>
         <App />
       </SocketContextProvider>
     </AuthContextProvider>
-  </React>
+  </>
 );
