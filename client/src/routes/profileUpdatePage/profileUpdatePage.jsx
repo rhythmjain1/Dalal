@@ -9,7 +9,7 @@ function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [avatar, setAvatar] = useState([]);
-
+ 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {

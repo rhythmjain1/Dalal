@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 // Create a React context to share script loaded state if needed by other components
 const CloudinaryScriptContext = createContext();
 
-function UploadWidget({ uwConfig, setPublicId, setState }) {
+function UploadWidget({ uwConfig,setState }) {
   // Track whether the Cloudinary upload widget script has finished loading
   const [loaded, setLoaded] = useState(false);
 
@@ -49,11 +49,9 @@ function UploadWidget({ uwConfig, setPublicId, setState }) {
           // Update the state with the new uploaded image URL
           setState((prev) => [...prev, result.info.secure_url]);
 
-          // If a setPublicId function was passed, also update public_id (optional)
-          if (setPublicId) setPublicId(result.info.public_id);
         }
       }
-    );
+    ); 
 
     // Open the Cloudinary upload widget popup/modal so user can select files
     widget.open();

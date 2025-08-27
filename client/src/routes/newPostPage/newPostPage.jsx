@@ -96,7 +96,7 @@ function NewPostPage() {
             <div className="item">
               <label htmlFor="type">Type</label>
               <select name="type">
-                <option value="rent" defaultChecked>
+                <option value="rent" >
                   Rent
                 </option>
                 <option value="buy">Buy</option>
