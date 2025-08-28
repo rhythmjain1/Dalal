@@ -9,7 +9,7 @@ function SearchBar() {
     type: "buy",
     city: "",
     minPrice: 0,
-    maxPrice: 0,
+    maxPrice: 0, 
   });
 
   const switchType = (val) => {

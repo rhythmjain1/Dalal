@@ -19,7 +19,7 @@ function App() {
         {
           path: "/",
           element: <HomePage />,
-        },
+        }, 
         {
           path: "/list",
           element: <ListPage />,

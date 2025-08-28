@@ -23,7 +23,7 @@ function ListPage() {
                   <Card key={post.id} item={post} />
                 ))
               }
-            </Await>
+            </Await> 
           </Suspense>
         </div>
       </div>
